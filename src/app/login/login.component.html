@@ -1,1 +1,52 @@
-<p>login works!</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- jQuery library -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+
+</head>
+
+<body>
+    <h1 class="text-center pt-4 font-italic text-light">{{ title }}</h1>
+    <div class="container" style="width: 60%;">
+    <!-- Form starts-->
+    <form  class="form mt-5 pb-3 border border-dark bg-dark rounded "
+             #loginForm="ngForm">
+
+             {{  loginForm.value | json }}
+
+        <div class="form-group m-3">
+         <label for="email" class= "font-weight-bold">Email address:</label>
+           <input type="email" class="form-control" placeholder="Enter email" id="email"
+            ngModel name="email" required #email="ngModel"> 
+            <div [hidden]="email.valid || email.pristine"
+                     class="alert alert-danger">
+                   Name is required
+                </div>
+        </div>
+        <div class="form-group m-3">
+          <label for="pass" class= "font-weight-bold">Password:</label>
+            <input type="password" class="form-control" placeholder="Enter password"  id="pass"
+               ngModel name="pass" required>
+         </div>
+
+        
+       <!-- Submit button-->
+        <div class="text-center"  >
+        <button type="submit" class="btn btn-success btn-lg  font-weight-bold">Submit</button>
+        <!-- Submit button ends here-->
+        </div>
+      </form>
+      <!-- Form ends here-->
+    </div>
+</body>
+</html>

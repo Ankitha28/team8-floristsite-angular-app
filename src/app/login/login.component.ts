@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-
-  constructor() { 
-    console.log("Login component loaded");
-  }
-
+export class LoginComponent{
   title:string = "Login Form";
 
- // onSubmit(){
-  //  console.log("Submitted");
- // } 
-  
+   data : any = {}
 
+   constructor() { 
+    console.log("Login component loaded");
+  }
+  onSubmit(){
+    console.log(this.data);
+  }
+   
 
   ngOnInit(): void {
   }

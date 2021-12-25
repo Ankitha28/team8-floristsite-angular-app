@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+       photo = "assets/images/dahlia.png";
+
+  constructor() { 
+    console.log("Navbar Loaded");
+  }
 
   ngOnInit(): void {
   }

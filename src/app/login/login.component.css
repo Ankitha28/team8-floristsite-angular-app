@@ -2,6 +2,9 @@ body {
    background-image: url('src/assets/images/bg.jpg');
    background-repeat: no-repeat;
    background-position: center;
+   background-size: cover;
+   height: 525px;
+   margin-top:-24px;
    
   }
 .form{
@@ -10,7 +13,8 @@ body {
   color: white;
   font-family: Helvetica;
 }
-.form-check-label {
+.form-label {
 color:lightsteelblue;
 font-weight: 700;
 }
+

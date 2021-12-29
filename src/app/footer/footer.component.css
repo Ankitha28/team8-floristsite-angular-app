@@ -1,0 +1,11 @@
+.connect a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: serif;
+}
+
+.connect a i{
+ padding-right: 15px;
+ color: violet;
+ 
+}

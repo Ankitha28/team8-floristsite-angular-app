@@ -1,0 +1,20 @@
+.navbar {
+ height: 70px;
+ 
+}
+
+.navbar-nav li {
+    margin-right: 40px;
+    font-weight: 600;
+}
+
+.navbar-nav a{
+    color:darkcyan
+}
+
+.navbar-nav i {
+    padding-right: 4px;;
+}
+.active {
+    background-color: yellowgreen;
+}

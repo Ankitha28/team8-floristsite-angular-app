@@ -1,0 +1,22 @@
+.intro{
+        background-image: url('src/assets/images/home1.jpg') ;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center ;
+        margin-top: -24px;
+}
+
+blockquote {
+   padding-top: 10px;
+   margin-left: 80px;
+   font-size: large;
+   background-color:linen;
+   color: mediumorchid;
+   width: 30%;
+   padding: 15px;
+}
+
+.card:hover {
+        transform: scale(1.1);
+        
+      }

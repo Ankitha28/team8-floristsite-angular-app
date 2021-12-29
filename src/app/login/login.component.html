@@ -1,42 +1,28 @@
 <body>
-    <h1 class="text-center pt-4 text-light fst-italic "><u> {{ title }} </u></h1>
-    <div class="container" style="width: 60%;">
+    <h1 class="text-center pt-5 text-light fst-italic "><u> {{ title }} </u></h1>
+    <div class="container pb-4" style="width: 60%;">
     <!-- Form starts-->
-    <form  class="form mt-3 pb-3 border border-dark bg-dark rounded" #login = "ngForm">
+    <form  class="form mt-4 pb-3 border border-dark bg-dark rounded" #login = "ngForm">
 
        <!--email field starts-->
         <div class="form-group m-3">
          <label  class= "font-weight-bold">Email address:</label>
            <input type="email" 
-            class="form-control"
+            class="form-control mt-2"
             placeholder="Enter email" 
-            name="email" 
-            [(ngModel)] ="data.email" 
-            required 
-            #email1 = "ngModel"
-             /> 
-             
-        </div>
-        <div *ngIf="email1.invalid && (email1.dirty || email1.touched)" class="alert alert-danger">
-          <div *ngIf="email1.errors?.['required']"> Email is required</div>
-          
-        </div>
-        
-      <!-- email field ends-->
+            name="email" /> 
+       </div>
+  <!-- email field ends-->
 
-      <!--Password field starts-->
-        <div class="form-group m-3">
-          
-          <label class= "font-weight-bold">Password:</label>
+      <!--Password field starts--> 
+    <div class="form-group m-3">
+         <label class= "font-weight-bold">Password:</label>
             <input type="password" 
-            class="form-control" 
+            class="form-control mt-2" 
             placeholder="Enter password" 
-            name="password" 
-            required
-             />
-             
-         </div>        
- <!--Password field ends-->
+            name="password" />
+     </div>     
+<!--Password field ends-->
 
   <!--Forgot password-->
           <a style="color: white; font-family: Helvetica; margin-left: 75% ;" href ="#">Forgot Password</a>

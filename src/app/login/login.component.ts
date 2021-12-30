@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
+import { UsersService } from './users.service';
 
 
 
@@ -7,20 +10,31 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent{
-  title:string = "Login Form";
+    title:string = "Login Form";
+    users:any = [];
+    service: UsersService;
+        
 
-   data : any = {}
+    data : any = {}
 
-   constructor() { 
-    console.log("Login component loaded");
-  }
-  onSubmit(){
-    console.log(this.data);
-  }
+    constructor(service: UsersService){
+        this.service = service;
+        console.log("Login component loaded");
+    }
+
+    loginAccount(form: NgForm){
+        console.log(this.data);
+        this.service.getAllUsers().subscribe((response:any) => { 
+            this.users = response;
+        
+            console.log(this.users)
+        });
+    }
    
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

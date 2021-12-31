@@ -1,0 +1,181 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <form 
+                class=" form-horizontal" 
+                method="post" 
+                id="contact_form"
+                #postForm="ngForm" 
+                #login = "ngForm"
+                (submit)="createAccount(postForm)"    
+            >
+                <!-- Form Name -->
+                <h2 style="text-align: center;"><b>Registration Form</b></h2> <br>
+                <!-- Text input-->
+                <div class="form-group">
+                    
+                    <label class="col-md-6 control-label">First Name</label>
+                    <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>  
+                            <input 
+                                id="first_name" 
+                                name="first_name" 
+                                placeholder="First Name" 
+                                class="form-control" 
+                                type="text" 
+                                ngModel required First Name 
+                                #First_Name="ngModel"
+                            >                              
+                        </div> 
+                        <span class="help-block text-white" *ngIf="!First_Name.valid && First_Name.touched">Please enter a valid first name!</span >    
+                    </div>
+                </div> 
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-6 control-label">Last Name</label>
+                    <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input 
+                                id="last_name" 
+                                name="last_name" 
+                                placeholder="Last Name" 
+                                class="form-control" 
+                                type="text"
+                                ngModel required Last Name 
+                                #Last_Name="ngModel"
+                            >                                
+                        </div>
+                        <span class="help-block text-white" *ngIf="!Last_Name.valid && Last_Name.touched">Please enter a valid last name!</span>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-6 control-label">E-Mail</label>
+                    <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input 
+                                id="email" 
+                                name="email" 
+                                placeholder="E-Mail Address" 
+                                class="form-control" 
+                                type="text" 
+                                ngModel required email 
+                                #email="ngModel"
+                            >
+                        </div>
+                        <span class="help-block text-white" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-6 control-label">Contact No.</label>
+                    <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input 
+                                id="contact_no"
+                                name="contact_no" 
+                                placeholder="Enter Mobile Number" 
+                                class="form-control" 
+                                type="text"
+                                ngModel required Enter Mobile Number
+                                #contact_no="ngModel">
+                        </div>
+                        <span class="help-block text-white" *ngIf="!contact_no.valid && contact_no.touched">Please enter a valid contact no!</span>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-6 control-label">Address</label>
+                    <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input 
+                                id="address"
+                                name="Address" 
+                                placeholder="Address" 
+                                class="form-control" 
+                                type="text" 
+                                ngModel required address 
+                                #address="ngModel"
+                            >
+                        </div>
+                        <span class="help-block text-white" *ngIf="!address.valid && address.touched">Please enter a valid address!</span>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-6 control-label">Password</label>
+                    <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input 
+                                id="password"
+                                name="user_password" 
+                                placeholder="Password" 
+                                class="form-control" 
+                                type="password"
+                                ngModel required Password 
+                                #password="ngModel" 
+                                required="true"
+                            >
+                        </div>
+                        <span class="help-block text-white" *ngIf="!password.valid && password.touched">Please enter a valid password!</span>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-6 control-label">Confirm Password</label>
+                    <div class="col-md-6 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input 
+                                name="confirm_password" 
+                                placeholder="Confirm Password" 
+                                class="form-control"
+                                type="password" 
+                                ngModel required Confirm Password 
+                                #confirm_password="ngModel"
+                            >
+                        </div>
+                        <span class="help-block text-white" *ngIf="!confirm_password.valid && confirm_password.touched">Please enter a valid confirm password!</span>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+
+
+
+                <!-- Select Basic -->
+
+                <!-- Success message -->
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-5 control-label"></label>
+                    <div class="col-md-4"><br>
+                        <button type="submit" class="btn btn-warning">SUBMIT 
+                            <span class="glyphicon glyphicon-send"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-5 control-label"></label>
+                    <div class="col-md-4"><br>
+                        <button 
+                            type="cancel" 
+                            class="btn btn-danger">CANCEL 
+                            <span class="glyphicon glyphicon-send"></span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- </fieldset> -->
+            </form>
+        
+    </div>
+</div>

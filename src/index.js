@@ -32,11 +32,11 @@ app.get("/", (req, res) => {
 });
 
 // define more URL
-app.get("/api/users", db.getUsers);
-app.get("/api/users/:id", db.getUsersById);
-app.post("/api/users", db.postUsers);
+app.get("/api/users/:email/:pass", db.getUserByCred);
+// app.post("/api/users", db.createAccount);
+app.post("/api/users", db.login);
 
 const port = 3000;
 app.listen(port, () => {
-  console.log("Web server is listening on port 3000 ");
+    console.log("Web server is listening on port 3000");
 });

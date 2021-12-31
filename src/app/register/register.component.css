@@ -1,0 +1,14 @@
+.container
+{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    background-position-x: center;
+    margin: auto;
+
+}
+
+
+
+input.ng-invalid.ng-touched{ border: 3px solid red;}

@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
             email: form.value.email, 
             password: form.value.password,
         };
-        this.service.addNewUsers(newUser).subscribe((response) =>{
+        this.service.addNewUser(newUser).subscribe((response) =>{
             console.log(response);
         });
 

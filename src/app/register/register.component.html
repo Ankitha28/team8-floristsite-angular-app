@@ -28,7 +28,7 @@
                                 #First_Name="ngModel"
                             >                              
                         </div> 
-                        <span class="help-block text-white" *ngIf="!First_Name.valid && First_Name.touched">Please enter a valid first name!</span >    
+                        <span class="help-block text-danger" *ngIf="!First_Name.valid && First_Name.touched">Please enter a valid first name!</span >    
                     </div>
                 </div> 
                 <!-- Text input-->
@@ -47,7 +47,7 @@
                                 #Last_Name="ngModel"
                             >                                
                         </div>
-                        <span class="help-block text-white" *ngIf="!Last_Name.valid && Last_Name.touched">Please enter a valid last name!</span>
+                        <span class="help-block text-danger" *ngIf="!Last_Name.valid && Last_Name.touched">Please enter a valid last name!</span>
                     </div>
                 </div>
                 <!-- Text input-->
@@ -66,7 +66,7 @@
                                 #email="ngModel"
                             >
                         </div>
-                        <span class="help-block text-white" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
+                        <span class="help-block text-danger" *ngIf="!email.valid && email.touched">Please enter a valid email!</span>
                     </div>
                 </div>
                 <!-- Text input-->
@@ -84,7 +84,7 @@
                                 ngModel required Enter Mobile Number
                                 #contact_no="ngModel">
                         </div>
-                        <span class="help-block text-white" *ngIf="!contact_no.valid && contact_no.touched">Please enter a valid contact no!</span>
+                        <span class="help-block text-danger" *ngIf="!contact_no.valid && contact_no.touched">Please enter a valid contact no!</span>
                     </div>
                 </div>
                 <!-- Text input-->
@@ -95,7 +95,7 @@
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                             <input 
                                 id="address"
-                                name="Address" 
+                                name="address" 
                                 placeholder="Address" 
                                 class="form-control" 
                                 type="text" 
@@ -103,7 +103,7 @@
                                 #address="ngModel"
                             >
                         </div>
-                        <span class="help-block text-white" *ngIf="!address.valid && address.touched">Please enter a valid address!</span>
+                        <span class="help-block text-danger" *ngIf="!address.valid && address.touched">Please enter a valid address!</span>
                     </div>
                 </div>
                 <!-- Text input-->
@@ -114,7 +114,7 @@
                             <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                             <input 
                                 id="password"
-                                name="user_password" 
+                                name="password" 
                                 placeholder="Password" 
                                 class="form-control" 
                                 type="password"
@@ -123,7 +123,7 @@
                                 required="true"
                             >
                         </div>
-                        <span class="help-block text-white" *ngIf="!password.valid && password.touched">Please enter a valid password!</span>
+                        <span class="help-block text-danger" *ngIf="!password.valid && password.touched">Please enter a valid password!</span>
                     </div>
                 </div>
                 <!-- Text input-->
@@ -141,7 +141,7 @@
                                 #confirm_password="ngModel"
                             >
                         </div>
-                        <span class="help-block text-white" *ngIf="!confirm_password.valid && confirm_password.touched">Please enter a valid confirm password!</span>
+                        <span class="help-block text-danger" *ngIf="!confirm_password.valid && confirm_password.touched">Please enter a valid confirm password!</span>
                     </div>
                 </div>
 
@@ -168,7 +168,7 @@
                     <div class="col-md-4"><br>
                         <button 
                             type="cancel" 
-                            class="btn btn-danger">CANCEL 
+                            class="btn btn-danger mb-5">CANCEL 
                             <span class="glyphicon glyphicon-send"></span>
                         </button>
                     </div>

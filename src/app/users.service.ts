@@ -23,16 +23,16 @@ export class UsersService {
         return this.http.get(`${this.baseUrl}/api/users`);
     }
 
-    addNewUsers(newUser: User){
+    addNewUser(newUser: User){
         console.log("addNewUsers was called");
 
-        return this.http.post(`${this.baseUrl}/api/users`, newUser);
+        return this.http.post(`${this.baseUrl}/api/users/create`, newUser);
     }
 
     login(user: User){
         console.log("getUserByCred was called");
 
-        return this.http.post(`${this.baseUrl}/api/users`, user);
+        return this.http.post(`${this.baseUrl}/api/users/authenticate`, user);
     }
 }
 

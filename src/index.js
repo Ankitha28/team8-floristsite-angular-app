@@ -33,8 +33,8 @@ app.get("/", (req, res) => {
 
 // define more URL
 app.get("/api/users/:email/:pass", db.getUserByCred);
-// app.post("/api/users", db.createAccount);
-app.post("/api/users", db.login);
+app.post("/api/users/create", db.createAccount);
+app.post("/api/users/authenticate", db.login);
 
 const port = 3000;
 app.listen(port, () => {

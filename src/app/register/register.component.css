@@ -1,11 +1,13 @@
 .container
 {
+    background-image: url('src/assets/images/register.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     background-size: cover;
     background-position: center;
     background-position-x: center;
     margin: auto;
+    margin-top: -24px;
 
 }
 

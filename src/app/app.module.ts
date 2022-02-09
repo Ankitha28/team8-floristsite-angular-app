@@ -10,6 +10,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
+import { ProductComponent } from './product/product.component';
+import { ProductService } from './services/product.service';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { RegisterComponent } from './register/register.component';
     NavbarComponent,
     HomeComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

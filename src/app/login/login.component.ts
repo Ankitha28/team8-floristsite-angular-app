@@ -13,6 +13,7 @@ import { UsersService } from '../users.service';
 
 export class LoginComponent{
     title:string = "Login Form"; 
+    
     users:any = []; 
     service: UsersService; 
     data : any = {}; 
@@ -30,7 +31,9 @@ export class LoginComponent{
         const user: User={email: form.value.email, password: form.value.password};
         // this.service.loginGet().subscribe((response:any) => { 
         this.service.login(user).subscribe((response:any) => { 
-            if (response.length) { console.log(true) }
+            if (response.length) { 
+                console.log(true)
+             }
             console.log(this.users);
         });
     }

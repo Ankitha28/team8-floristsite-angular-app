@@ -1,20 +1,37 @@
-<h3>product</h3>
+<head>
+  <link rel="stylesheet" 
+  href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+</head>
 
+<div style="background-color: bisque; margin-top: -24px;">
+<div class="pt-4" style="padding-left: 75%;" >
+<form class="border border-dark rounded search " style="width: 300px;">
+ <input type="text" (ngModelChange) ="searchProducts(key.value)" #key ="ngModel" ngModel
+    class="form-control" name ="key" id="value"  placeholder="Search for products..." />
+</form>
+</div>
 
-<div class="container">
+<div class="container mt-5 panel">
    <div class="row">
-       <div *ngFor = " let pr of products" class="col">
-        <div class="card mb-4" style="width: 350px;" >
-            <img src="{{ pr.image }} " class="card-img-top" alt="flower">
+       <div class="col" *ngFor = " let pr of products | paginate: { itemsPerPage : 6 , currentPage : p }; " >
+         <div class="card mb-4" style="width: 340px; background-color: burlywood" >
+            <img src="{{ pr.image }} " alt="flower" class="card-img-top p-3 rounded" style="height: 280px;">
             <div class="card-body">
-              <h5 class="card-title text-uppercase">{{ pr.name }}</h5>
-              <p class="card-text">{{ pr.description }}.</p>
-              <p class="card-text">{{ pr.price | currency:'INR '}}</p>
+             <h5 class="card-title text-uppercase">{{ pr.name }}</h5>
+              <p class="card-text ">{{ pr.description }}.</p>
+                <h6 class="card-text">{{ pr.price | currency:'INR'}}</h6>
               <a href="#" class="btn btn-primary">Add to cart</a>
             </div>
-          </div>
+        </div>
+    </div>
+  </div>
 
-       </div>
+<div style="color:brown ; padding-bottom: 5px;">
+  <pagination-controls (pageChange) = "p = $event" ></pagination-controls>
+</div>  
 
-   </div>
+</div>
+
+
+
 </div>

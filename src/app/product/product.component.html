@@ -20,10 +20,10 @@
              <h5 class="card-title text-uppercase">{{ pr.name }}</h5>
               <p class="card-text ">{{ pr.description }}.</p>
                 <h6 class="card-text">{{ pr.price | currency:'INR'}}</h6>
-              <a href="#" class="btn btn-primary">Add to cart</a>
+                <button (click)="addtoCart(pr)" class="btn btn-primary">Add to cart</button>
             </div>
         </div>
-    </div>
+    </div> <!--for loop ends-->
   </div>
 
 <div style="color:brown ; padding-bottom: 5px;">

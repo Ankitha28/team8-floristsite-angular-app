@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CartItem } from '../cart-status/cart-item';
 import { Product } from '../product/product';
+import { CartService } from '../services/cart.service';
 import { ProductService } from '../services/product.service';
 
 
@@ -13,10 +15,9 @@ export class ProductComponent implements OnInit {
     public products: Product[];
     p : number = 1;
   
-    card1 ="assets/images/birth.jpg"
-    card2 = "assets/images/ann.jpg"
+    
        
-constructor( private productService : ProductService) { 
+constructor( private productService : ProductService , private cartService : CartService) { 
     console.log("Product Component Loaded");
   }
 
@@ -47,6 +48,13 @@ constructor( private productService : ProductService) {
          this.showProducts();
          
        }
+     }
+
+     addtoCart(selectedproduct:Product){
+   console.log(`add to cart: ${selectedproduct.name},${selectedproduct.price} ,${selectedproduct.description}`);
+   const theCartItem= new CartItem(selectedproduct);
+   this.cartService.addToCart(theCartItem);
+
      }
       
    }

@@ -12,9 +12,11 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductComponent } from './product/product.component';
+import { NgxPaginationModule} from 'ngx-pagination';
+import { CartStatusComponent } from './cart-status/cart-status.component';
+import { CartDetailsComponent } from './cart-details/cart-details.component';
 import { ProductService } from './services/product.service';
-import {NgxPaginationModule} from 'ngx-pagination';
-
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {NgxPaginationModule} from 'ngx-pagination';
     HomeComponent,
     FooterComponent,
     RegisterComponent,
-    ProductComponent
+    ProductComponent,
+    CartStatusComponent,
+    CartDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
     NgxPaginationModule
    
   ],
-  providers: [ProductService],
+  providers: [ProductService,CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
